@@ -56,6 +56,7 @@ Users should be able to:
 - Spartan font-style takes a lot of space ?
 - Have to refresh to get sizing right.
 - Tablet screen size is a mess.
+- Arrows were mocked up for 1440px x 1080px - poor implementation of absolute positioning
 
 ### Useful resources
 
