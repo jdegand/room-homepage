@@ -1,0 +1,296 @@
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #fff; 
+    overflow-x: hidden; 
+    color: black;
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+}
+
+ul li {
+    margin: 0 5px;
+}
+
+h1, h3 {
+    font-family: "Spartan", sans-serif;
+    color: black;
+}
+
+.desktop-none {
+    display: none;
+    z-index: 20;
+}
+
+#desktop-nav {
+    display: flex;
+    background: transparent;
+    margin: 0 50px;
+    color: #fff;
+    position: unset;
+    height: auto;
+    padding: 0;
+}
+
+.room-logo {
+    height: 25px;
+    width: 100px;
+    margin: 20px;
+}
+
+.nav {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.flex, 
+.flex1 { 
+    display: flex;  
+    justify-content: flex-start;
+}
+
+.slider {
+    width: 4320px;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    max-height: 60vh;
+}
+
+.slide {
+    width: 1440px;
+    height: 60vh;
+}
+
+.slide-content {
+    width: 40vw;
+}
+
+.slide-text {
+    margin: 20px 0;
+    color: hsl(0, 0%, 63%);
+}
+
+.slide-more {
+    text-transform: uppercase;
+    color: hsl(0, 0%, 27%);
+    margin-right: 25px;
+}
+
+.arrows {
+    width: 3.5vw;
+    margin-top: -50px;
+    position: absolute;
+    height: 50px;
+    background: black;
+    left: 63.5%;
+    bottom: 40%;
+}
+
+.arrow {
+    display: inline-block; 
+    position: absolute; 
+    width: 1.2vw; 
+    height: 1.2vw; 
+    background: transparent; 
+    text-indent: -9999px; 
+    border-top: 0.15vw solid #fff; 
+    border-left: 0.15vw solid #fff; 
+    text-decoration: none; 
+    color: transparent;
+    margin: 20px 5px 10px 5px;
+}
+.arrow:hover {
+    border-color: grey; 
+    border-width: 0.25vw;
+}
+.arrow:before {
+    display: block; 
+    height: 200%; 
+    width: 200%; 
+    margin-left: -50%; 
+    margin-top: -50%; 
+    content: ""; 
+    transform: rotate(45deg);
+}
+.arrow.prev {
+    transform: rotate(-45deg); 
+    left: 0;
+}
+.arrow.next {
+    transform: rotate(135deg);
+     right: 0;
+}
+
+.bottom-grid {
+    width: 100vw;
+    height: 40vh;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    align-items: center; 
+    color: hsl(0, 0%, 63%); 
+    background:#fff;
+}
+
+.shop-now-container {
+    display: flex;
+    align-items: center;
+}
+
+.slide-title {
+    font-size: 28px;
+}
+
+.desktop-only {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding-left: 100px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.slide-content {
+    margin: auto;
+    padding: 0 50px;
+}
+
+.bottom-grid-text {
+    padding: 0 10px;
+}
+
+.bottom-grid-text h3 {
+    padding: 20px 0;
+}
+
+.bottom-grid-img {
+    height: 40vh;
+}
+
+@media (max-width: 800px) {
+
+    h1, h3 {
+        font-family: "Spartan", sans-serif;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+ 
+    .desktop-none {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        margin: 20px 80px 20px 20px;
+    }
+
+    .bottom-grid {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .slide {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .slider {
+        height: 100vh;
+    }
+
+    .slide-more {
+        color: hsl(0, 0%, 27%);
+    }
+
+    .slider-wrapper {
+        max-height: 100vh;
+    }
+
+    .flex1 { 
+        display: flex;  
+        justify-content: flex-start;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .slide-content {
+        width: 100vw;
+        padding: 30px;
+    }
+
+    .arrows {
+        width: 50px;
+        margin-top: -40px;
+        position: absolute;
+        height: 40px;
+        background: black;
+        left: 87.1%;
+        bottom: 46%;
+    }
+    #desktop-nav {
+        width: 100vw;
+        display: flex;
+        background: #fff;
+        color: black;
+        position: unset;
+        height: 60px;
+        margin: 0;
+        position: absolute;
+        padding-left: 100px;
+    }
+
+    .bottom-grid {
+        background: #fff;
+        color: black;
+        margin-top: 50px;
+    }
+
+    .bottom-grid-text {
+        padding: 50px;
+        color: hsl(0, 0%, 63%);
+    }
+
+    .bottom-grid-text h3 {
+        margin: 20px 0;
+        color: black;
+    }
+}
+
+@media (min-width: 1500px) {
+    .arrows {
+        width: 3.5vw;
+        margin-top: -50px;
+        position: absolute;
+        height: 50px;
+        background: black;
+        left: 57.1%;
+        bottom: 40%;
+    }
+}
